@@ -3,7 +3,6 @@ import Image from 'next/future/image'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background.png'
-import hero from '@/images/oneummah/hero.png'
 import { HeroCollage } from '@/components/HeroCollage'
 
 export function Hero() {
@@ -52,11 +51,6 @@ export function Hero() {
           </div>
           <div className="hidden basis-1/2 lg:flex">
             <HeroCollage />
-            {/* <Image className="object-contain" src={hero} alt="" /> */}
-            {/* [Bangladesh:Hover]
-            [Zoom:Hover]
-            [Click:Link]
-            [Flash 1by1] */}
           </div>
         </div>
         <div className="mt-10 flex justify-center">

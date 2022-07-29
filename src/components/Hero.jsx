@@ -7,7 +7,7 @@ import { HeroCollage } from '@/components/HeroCollage'
 
 export function Hero() {
   return (
-    <div className="sm:py-15 relative pt-20 pb-20">
+    <div className="sm:py-15 relative lg:pt-20 lg:pb-20">
       <div className="absolute inset-x-0 -top-48 -bottom-14 overflow-hidden bg-indigo-50">
         <Image
           className="xl:translate-x-[27%]2%] absolute left-full top-0 -translate-x-1/2 sm:left-1/2 sm:translate-y-[-15%] sm:translate-x-[-20%] md:translate-x-0 lg:translate-x-[5%] lg:translate-y-[4%] xl:translate-y-[-8%]"
@@ -23,8 +23,8 @@ export function Hero() {
       </div>
       <Container className="relative">
         <div className="flex flex-row">
-          <div className="mx-auto max-w-2xl basis-1/2 lg:max-w-4xl lg:pr-5">
-            <h1 className="font-display text-5xl font-bold tracking-tighter text-gray-800 sm:text-7xl">
+          <div className="mx-auto max-w-2xl basis-1/2 text-center md:text-left lg:max-w-4xl lg:pr-5">
+            <h1 className="font-display text-6xl font-bold tracking-tighter text-gray-800 sm:text-7xl">
               United Against{' '}
               <span className="relative whitespace-nowrap text-blue-600">
                 <svg
@@ -39,21 +39,33 @@ export function Hero() {
               </span>
             </h1>
             <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
-              <p>
+              <p className="hidden md:flex">
                 One Ummah are working in 15 countries worldwide carrying out
                 life-saving projects.
               </p>
               <p>Donate today and save lives.</p>
             </div>
-            <Button href="#" className="mt-10 w-full sm:hidden">
+            <Button
+              data-tooltip-target="tooltip-default"
+              href="#"
+              className="mt-10 w-full sm:hidden"
+            >
               Donate
             </Button>
+            <div
+              id="tooltip-default"
+              role="tooltip"
+              className="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 py-2 px-3 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+            >
+              Tooltip content
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
           </div>
-          <div className="hidden basis-1/2 lg:flex">
+          <div className="hidden basis-1/2 md:flex">
             <HeroCollage />
           </div>
         </div>
-        <div className="mt-10 flex justify-center">
+        <div className="flex justify-center lg:mt-10">
           <dl className="mt-10 grid grid-cols-2 gap-y-6 gap-x-10 text-center sm:mt-16 sm:gap-y-10 sm:gap-x-16 lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start">
             {[
               ['Donation Policy:', '100%'],

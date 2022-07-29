@@ -11,8 +11,8 @@ import syriaImage from '@/images/oneummah/hero/syria.png'
 
 export function HeroCollage() {
   return (
-    <div className="-mt-20 flex h-[30rem] w-[36rem] flex-row">
-      <div className="flex w-1/6 flex-wrap">
+    <div className="lg:-mt-20 flex h-[30rem] w-[36rem] flex-row md:pl-10">
+      <div className="hidden w-1/6 flex-wrap lg:flex">
         <HeroCollageImage width="w-full" height="h-1/5" />
         <HeroCollageImage
           width="w-full"

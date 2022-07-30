@@ -11,6 +11,7 @@ export function HeroCollageImage({
   labelY = 'bottom',
   bg = '', // bg-blue-200, opacity-20, grayscale
   href = '/test',
+  emergency = false,
   opacity = '',
 }) {
   if (!src) {
@@ -30,10 +31,17 @@ export function HeroCollageImage({
             alt=""
             priority
           />
+          {!!emergency && (
+            <div className={`absolute bottom-0 ${emergency}-0 m-2`}>
+              <span className="rounded bg-red-700 p-1 text-xs text-white">
+                Emergency Appeal
+              </span>
+            </div>
+          )}
           <div
-            className={`absolute -left-2 ${labelY}-0 mx-2 w-full bg-blue-600 px-1 pr-2 text-${labelX} text-xl font-semibold text-white`}
+            className={`absolute -left-2 ${labelY}-0 mx-2 w-full bg-blue-600 px-1 pr-2 text-${labelX} text-md text-white`}
           >
-            <p>{label}</p>
+            <div>{label}</div>
           </div>
         </Link>
       </div>

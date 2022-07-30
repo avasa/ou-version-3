@@ -38,6 +38,7 @@ export function HeroCollage() {
           labelX="right"
           labelY="top"
           href="/appeals/afghanistan"
+          emergency="right"
         />
         <HeroCollageImage
           width="w-1/3"

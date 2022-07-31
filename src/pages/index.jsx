@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import { HeaderWithNav } from '@/components/HeaderWithNav'
 import { Hero } from '@/components/Hero'
 import { Donate } from '@/components/Donate'
 import { Newsletter } from '@/components/Newsletter'
@@ -19,7 +20,7 @@ export default function Home() {
           content="Non-profitable charity organisation that provides humanitarian assistance aid to those most in need around the world."
         />
       </Head>
-      <Header />
+      <HeaderWithNav />
       <main>
         <Hero />
         <Donate />

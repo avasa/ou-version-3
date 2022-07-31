@@ -1,4 +1,5 @@
 
+// strike under nav links
 // price points for appeals
 // mobile version
 

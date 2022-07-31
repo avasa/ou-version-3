@@ -21,12 +21,19 @@ export function HeroCollageImage({
   if (label) {
     return (
       <div
-        className={`${width} ${height} zoom-pic relative cursor-pointer overflow-hidden rounded-lg border-2 border-transparent shadow-md hover:shadow-xl`}
+        className={clsx(
+          `${width} ${height} zoom-pic relative cursor-pointer overflow-hidden rounded-lg border-2 border-transparent shadow-md hover:shadow-xl`,
+          emergency &&
+            'overflow-hidden bg-white/5 shadow-black/5 before:absolute before:inset-0 before:-translate-x-full before:rotate-12 before:animate-[shimmer_4s_infinite] before:bg-gradient-to-r before:from-transparent before:via-rose-100/10 before:to-transparent'
+        )}
       >
         <Link href={href}>
           {' '}
           <Image
-            className="h-full w-full rounded object-cover"
+            className={clsx(
+              'h-full w-full rounded object-cover',
+              emergency && ''
+            )}
             src={src}
             alt=""
             priority

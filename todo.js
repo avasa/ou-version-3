@@ -1,7 +1,8 @@
-
-// strike under nav links
+// padlock on homepage
 // price points for appeals
-// mobile version
+
+// get sticky transparent bg from primer theme
+// get involved component from primer theme
 
 // nav
 // side-tab for social media

@@ -34,6 +34,32 @@ module.exports = {
       maxWidth: {
         '2xl': '40rem',
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-15deg)' },
+          '50%': { transform: 'rotate(15deg)' },
+        },
+        flipHorizontal: {
+          '50%': { transform: 'rotateY(180deg)' },
+        },
+        heartBeat: {
+          '0%': { transform: 'scale(1);' },
+          '14%': { transform: 'scale(1.05);' },
+          '28%': { transform: 'scale(1);' },
+          '42%': { transform: 'scale(1.05);' },
+          '70%': { transform: 'scale(1);' },
+        },
+        shimmer: {
+          '100%': {
+            transform: 'translateX(100%)',
+          },
+        },
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        flip: 'flipHorizontal 5s infinite',
+        beat: 'heartBeat 10s infinite',
+      },
     },
   },
   plugins: [

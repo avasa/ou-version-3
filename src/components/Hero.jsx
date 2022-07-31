@@ -52,7 +52,7 @@ export function Hero() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="mr-1 h-5 w-5 animate-pulse text-red-500"
+                className="mr-1 h-5 w-5 animate-flip text-red-500"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >

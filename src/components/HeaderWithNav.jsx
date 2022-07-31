@@ -99,9 +99,10 @@ function NavLink({ href, children }) {
   return (
     <Link
       href={href}
-      className="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-200 hover:text-slate-900"
+      className="hover:bg-slate-200 group relative inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:text-slate-900"
     >
       {children}
+      {/* <div className="absolute -ml-2 h-0.5 w-full scale-x-0 bg-blue-600 transition-transform group-hover:scale-x-100" /> */}
     </Link>
   )
 }
@@ -112,7 +113,7 @@ export function HeaderWithNav() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-4 lg:gap-x-8">
-            <Link href="#" aria-label="Home">
+            <Link href="/" aria-label="Home">
               <Logo className="h-24 w-auto" />
             </Link>
             <div className="hidden pt-3 md:flex md:gap-x-4">
@@ -126,7 +127,7 @@ export function HeaderWithNav() {
           <div className="-mt-16 flex items-center gap-x-0 pt-3 md:mt-0 md:gap-x-5 lg:gap-x-10">
             {/* User & Cart Buttons */}
             <div className="-mr-2 flex grow basis-0 justify-end md:mr-0">
-              <div className="hidden lg:flow-root mt-2">
+              <div className="mt-2 hidden lg:flow-root">
                 <a href="#" className="group -m-2 flex items-center p-2">
                   <UserIcon
                     className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
@@ -135,10 +136,10 @@ export function HeaderWithNav() {
                 </a>
               </div>
               <span
-                className="mt-2 mx-0 hidden h-6 w-px bg-gray-200 lg:mx-2 lg:flex"
+                className="mx-0 mt-2 hidden h-6 w-px bg-gray-200 lg:mx-2 lg:flex"
                 aria-hidden="true"
               />
-              <div className="mt-2 lg:m2-4 mr-4 flow-root">
+              <div className="lg:m2-4 mt-2 mr-4 flow-root">
                 <a href="#" className="group -m-2 flex items-center p-2">
                   <ShoppingBagIcon
                     className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"

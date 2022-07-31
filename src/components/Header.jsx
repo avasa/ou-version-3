@@ -44,7 +44,7 @@ export function Header() {
 
         {/* User & Cart Buttons */}
         <div className="mt-5 mr-1 flex grow basis-0 justify-end md:mr-0 lg:mt-0">
-          <div className="mt-1 flow-root pt-0.5">
+          <div className="mt-1 hidden pt-0.5 md:flow-root">
             <a href="#" className="group -m-2 flex items-center p-2">
               <UserIcon
                 className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
@@ -53,7 +53,7 @@ export function Header() {
             </a>
           </div>
           <span
-            className="mx-0 mt-1.5 h-6 w-px bg-gray-200 lg:mx-2"
+            className="hidden md:flex mx-0 mt-1.5 h-6 w-px bg-gray-200 lg:mx-2"
             aria-hidden="true"
           />
           <div className="lg:m2-4 mr-4 mt-1 flow-root pt-0.5">
@@ -70,7 +70,7 @@ export function Header() {
           </div>
           <Button
             href="#"
-            className="rounded-lg bg-blue-600 px-3 py-2 hover:bg-blue-700"
+            className="hidden md:flex rounded-lg bg-blue-600 px-3 py-2 hover:bg-blue-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

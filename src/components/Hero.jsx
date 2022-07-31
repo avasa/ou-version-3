@@ -23,9 +23,9 @@ export function Hero() {
       </div>
       <Container className="relative">
         <div className="flex flex-row">
-          <div className="mx-auto max-w-2xl basis-1/2 text-center md:text-left lg:max-w-4xl lg:pr-5">
+          <div className="lg:-mt-10 mx-auto max-w-2xl basis-1/2 text-center md:text-left lg:max-w-4xl lg:pr-5">
             {/* <p className="font-bold text-blue-600 absolute -top-16">100% Donation Policy</p> */}
-            <h1 className="font-display text-7xl font-bold tracking-tighter text-gray-800">
+            <h1 className="font-display text-6xl font-bold tracking-tighter text-gray-800 sm:text-7xl">
               United Against{' '}
               <span className="relative whitespace-nowrap text-blue-600">
                 <svg
@@ -44,13 +44,24 @@ export function Hero() {
                 One Ummah are working in 15 countries worldwide carrying out
                 life-saving projects.
               </p>
-              <p>Donate today and save lives.</p>
+              <p>Save lives, donate today.</p>
             </div>
             <Button
-              data-tooltip-target="tooltip-default"
               href="#"
-              className="mt-10 w-full sm:hidden"
+              className="mt-5 rounded-lg bg-blue-600 px-3 py-2 hover:bg-blue-700"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="mr-1 h-5 w-5 animate-pulse text-red-500"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                  clipRule="evenodd"
+                />
+              </svg>{' '}
               Donate
             </Button>
             <div

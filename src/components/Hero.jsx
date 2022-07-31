@@ -23,7 +23,7 @@ export function Hero() {
       </div>
       <Container className="relative">
         <div className="flex flex-row">
-          <div className="lg:-mt-10 mx-auto max-w-2xl basis-1/2 text-center md:text-left lg:max-w-4xl lg:pr-5">
+          <div className="mx-auto max-w-2xl basis-1/2 text-center md:text-left lg:-mt-20 lg:max-w-4xl lg:pr-5">
             {/* <p className="font-bold text-blue-600 absolute -top-16">100% Donation Policy</p> */}
             <h1 className="font-display text-6xl font-bold tracking-tighter text-gray-800 sm:text-7xl">
               United Against{' '}

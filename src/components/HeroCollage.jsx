@@ -11,8 +11,9 @@ import syriaImage from '@/images/oneummah/hero/syria.png'
 
 export function HeroCollage() {
   return (
-    <div className="lg:-mt-20 flex h-[30rem] w-[36rem] flex-row md:pl-10">
-      <div className="hidden w-1/6 flex-wrap lg:flex">
+    // h-[30rem] w-[36rem]
+    <div className="align-right flex flex-row md:ml-10 lg:-mt-20">
+      <div className="hidden w-0 flex-wrap lg:flex lg:w-1/6">
         <HeroCollageImage width="w-full" height="h-1/5" />
         <HeroCollageImage
           width="w-full"
@@ -28,7 +29,7 @@ export function HeroCollage() {
           bg="bg-blue-200"
         />
       </div>
-      <div className="flex w-3/6 flex-wrap">
+      <div className="flex flex-wrap lg:w-3/6">
         {/* Feature 1 */}
         <HeroCollageImage
           width="w-full"
@@ -56,7 +57,7 @@ export function HeroCollage() {
           href="/appeals/syria"
         />
       </div>
-      <div className="flex w-2/6 flex-wrap">
+      <div className="flex flex-wrap lg:w-2/6">
         <HeroCollageImage
           width="w-1/2"
           height="h-1/5"

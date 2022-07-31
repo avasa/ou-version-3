@@ -25,7 +25,7 @@ export function Hero() {
         <div className="flex flex-row">
           <div className="mx-auto max-w-2xl basis-1/2 text-center md:text-left lg:max-w-4xl lg:pr-5">
             {/* <p className="font-bold text-blue-600 absolute -top-16">100% Donation Policy</p> */}
-            <h1 className="font-display text-6xl font-bold tracking-tighter text-gray-800 sm:text-7xl">
+            <h1 className="font-display text-7xl font-bold tracking-tighter text-gray-800">
               United Against{' '}
               <span className="relative whitespace-nowrap text-blue-600">
                 <svg

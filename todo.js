@@ -1,10 +1,8 @@
 
-// donate component (for home)
+// price points for appeals
+// mobile version
 
 // nav
-// feedback plugin
-// update footer (tickets)
-
 // side-tab for social media
-// quick donate (human appeal)
-// nextroll (cookie popup)
+// feedbucket
+// next-roll (cookie popup)

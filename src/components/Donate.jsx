@@ -1,6 +1,21 @@
+import { useState, useEffect } from 'react'
 import { Container } from '@/components/Container'
 
 export function Donate() {
+  const [selectedAmount, setSelectedAmount] = useState('')
+
+  useEffect(() => {
+    let other = document.getElementById('other')
+    let custom = document.getElementById('custom')
+    if (selectedAmount === 'Other') {
+      other.classList.add('hidden')
+      custom.classList.remove('hidden')
+    } else {
+      other.classList.remove('hidden')
+      custom.classList.add('hidden')
+    }
+  }, [selectedAmount])
+
   return (
     <Container className="sticky top-10 hidden lg:block">
       <div className="rounded-xl border bg-gray-50 px-5 py-0 text-center shadow-blue-600 drop-shadow">
@@ -18,10 +33,11 @@ export function Donate() {
                   autoComplete="appeal"
                   className="focus:shadow-outline h-8 w-full appearance-none rounded border py-1 px-3 leading-tight text-gray-700 focus:outline-none"
                 >
-                  <option>Please appeal</option>
-                  <option>Afghanistan</option>
-                  <option>Palestine</option>
-                  <option>Syria</option>
+                  <option value="Select appeal">Select appeal</option>
+                  <option value="Zakah">Zakah (Most Needy)</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Palestine">Palestine</option>
+                  <option value="Syria">Syria</option>
                 </select>
               </div>
 
@@ -32,28 +48,54 @@ export function Donate() {
                   id="amount"
                   autoComplete="amount"
                   className="focus:shadow-outline h-8 w-full appearance-none rounded border py-1 px-3 leading-tight text-gray-700 focus:outline-none"
+                  defaultValue={selectedAmount}
+                  onChange={(e) => setSelectedAmount(e.target.value)}
                 >
-                  <option>Please amount</option>
-                  <option>10</option>
-                  <option>50</option>
-                  <option>100</option>
-                  <option>500</option>
-                  <option>1000</option>
+                  <option value="">Select amount</option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                  <option value="Other">Other amount</option>
                 </select>
               </div>
 
               <div className="flex-1">
-                <select
+                <input
+                  disabled
+                  id="other"
                   type="text"
-                  name="type"
-                  id="type"
-                  autoComplete="type"
+                  name="other"
+                  autoComplete="other"
+                  placeholder="Select 'Other' to unlock."
                   className="focus:shadow-outline h-8 w-full appearance-none rounded border py-1 px-3 leading-tight text-gray-700 focus:outline-none"
-                >
-                  <option>Donation type</option>
-                  <option>Sadaqah</option>
-                  <option>Zakat</option>
-                </select>
+                />
+                <div>
+                  <div
+                    className="relative mt-1 hidden rounded-md shadow-sm"
+                    id="custom"
+                  >
+                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                      <span className="text-gray-500 sm:text-sm">£</span>
+                    </div>
+                    <input
+                      type="text"
+                      name="custom"
+                      className="block h-8 w-full appearance-none -mt-1 rounded border py-1 px-3 pl-7 pr-12 text-gray-700 focus:outline-none"
+                      placeholder="0.00"
+                      aria-describedby="custom-currency"
+                    />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                      <span
+                        className="text-gray-500 sm:text-sm"
+                        id="custom-currency"
+                      >
+                        GBP
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="w-28 flex-initial">
